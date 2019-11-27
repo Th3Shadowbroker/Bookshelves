@@ -10,6 +10,9 @@ disabledWorlds: []
 # Whether to allow only books in shelves
 onlyBooks: true
 
+# Adds hopper mechanic to bookshelves when enabled
+hoppers: false
+
 # Material-restrictions
 # IMPORTANT: Restrictions only work when onlyBooks is set to false
 restrictions:
