@@ -27,6 +27,9 @@ public class HopperListener implements Listener {
             Hopper hopper = (Hopper) holder;
             Block facedBlock = getFacedBlock(hopper);
 
+            // Check lock state
+            if (hopper.isLocked()) { return; }
+
             // Check material
             if (facedBlock.getType() != Material.BOOKSHELF) { return; }
 
