@@ -64,6 +64,7 @@ public class Bookshelves extends JavaPlugin {
 		if (getConfig().contains("disabledWorlds")) { disabledWorlds.addAll(getConfig().getStringList("disabledWorlds")); }
 		onlyBooks = getConfig().getBoolean("onlyBooks", true);
 		checkRestrictions = getConfig().getBoolean("restrictions.enabled");
+		if (getConfig().getBoolean("hoppers")) { Bukkit.getPluginManager().registerEvents(new HopperListener(), this); }
 
 		// Initialize restrictions
 		if (checkRestrictions) {
